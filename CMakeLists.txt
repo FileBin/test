@@ -6,8 +6,8 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(PkgConfig)
-pkg_check_modules(GTKMM gtkmm-3.0)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTKMM gtkmm-3.0 REQUIRED)
 
 # file search
 file(GLOB_RECURSE SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/*.c" "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
